@@ -1,5 +1,4 @@
 from selenium import webdriver
-
 import unittest
 
 
@@ -13,9 +12,8 @@ class NewVisitTest(unittest.TestCase):
 
     def test_can_start_todo_list(self):
         self.browser.get("http://localhost:8000")
-        self.assertIn('To Do', self.browser.title,
-                      msg='Увы это неверный заголовок')
-        self.fail('Finish test')
+
+        self.assertIn("To Do", self.browser.title)
 
 
 if __name__ == '__main__':
