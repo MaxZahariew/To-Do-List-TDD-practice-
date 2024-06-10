@@ -9,7 +9,9 @@ def home_page(request):
         return redirect("/")
 
     items = Item.objects.all()
+
     return render(request, "main.html", {"items": items})
+
 
 def delet_task(request):
     pass
